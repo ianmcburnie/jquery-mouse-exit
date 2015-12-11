@@ -1,5 +1,10 @@
 # @ebay/jquery-mouse-exit
 
+<p>
+    <a href="https://travis-ci.org/ianmcburnie/jquery-mouse-exit"><img src="https://api.travis-ci.org/ianmcburnie/jquery-mouse-exit.svg?branch=master" alt="Build Status" /></a>
+    <a href='https://coveralls.io/github/ianmcburnie/jquery-mouse-exit?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-mouse-exit/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
+</p>
+
 jQuery collection plugin that triggers a 'mouseexit' event only when the mouse
 cursor has completely left the given element.
 
