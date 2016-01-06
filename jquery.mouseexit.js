@@ -1,7 +1,7 @@
 /**
 * @name @ebay/jquery-mouse-exit
 * @function $.fn.mouseExit
-* @version 0.0.2
+* @version 0.0.3
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc Triggers 'mouseexit' event when the mouse cursor has completely left
 * the given element and it's children.
@@ -12,33 +12,40 @@
 */
 (function ($, window, document, undefined) {
 
+    var pluginName = 'jquery-mouse-exit';
+
     $.fn.mouseExit = function mouseExit(options) {
 
         options = options || {};
 
         return this.each(function onEach() {
 
-            var $this = $(this),
-                timeout;
+            // check plugin does not already exist
+            if (!$.data(this, pluginName)) {
 
-            // event.relatedTarget is only supported in IE9+
-            // http://msdn.microsoft.com/en-us/library/ie/ff974881(v=vs.85).aspx
-            $this.on('mouseleave', function onMouseLeave(e) {
+                jQuery.data(this, pluginName, 'true');
 
-                timeout = window.setTimeout(function onTimeout() {
-                    $this.trigger('mouseexit', {"lostfocus": e.target, "gainedfocus": e.relatedTarget});
+                var $this = $(this),
+                    timeout;
 
-                    if (options.doOnce === true) {
-                        $this.off('mouseleave');
-                    }
+                // event.relatedTarget is only supported in IE9+
+                // http://msdn.microsoft.com/en-us/library/ie/ff974881(v=vs.85).aspx
+                $this.on('mouseleave', function onMouseLeave(e) {
 
-                }, options.delay || 250);
+                    timeout = window.setTimeout(function onTimeout() {
+                        $this.trigger('mouseexit', {"lostfocus": e.target, "gainedfocus": e.relatedTarget});
 
-                $this.one('mouseenter', function onMouseEnter(e) {
-                    window.clearTimeout(timeout);
+                        if (options.doOnce === true) {
+                            $this.off('mouseleave');
+                        }
+
+                    }, options.delay || 250);
+
+                    $this.one('mouseenter', function onMouseEnter(e) {
+                        window.clearTimeout(timeout);
+                    });
                 });
-            });
-
+            }
         });
     };
 
