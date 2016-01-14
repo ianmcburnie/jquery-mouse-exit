@@ -1,7 +1,7 @@
 /**
 * @name @ebay/jquery-mouse-exit
 * @function $.fn.mouseExit
-* @version 0.0.3
+* @version 0.0.4
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc Triggers 'mouseexit' event when the mouse cursor has completely left
 * the given element and it's children.
