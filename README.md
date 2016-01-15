@@ -5,7 +5,7 @@
     <a href='https://coveralls.io/github/ianmcburnie/jquery-mouse-exit?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-mouse-exit/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
 </p>
 
-jQuery collection plugin that triggers a 'mouseexit' event only when the mouse
+jQuery collection plugin that triggers a 'mouseExit' event only when the mouse
 cursor has completely left the given element.
 
 ```js
@@ -13,7 +13,7 @@ cursor has completely left the given element.
 $(collection).mouseExit();
 
 // handle event
-$(collection).on('mouseexit', function(e, data) {
+$(collection).on('mouseExit', function(e, data) {
     console.log(data.lostFocus, data.gainedFocus);
 })
 ```

@@ -22,9 +22,9 @@ describe("jquery.mouseexit.js", function() {
 
     it("should trigger mouseexit when mouse leaves element root", function(done) {
         // async assert
-        $testElement.on('mouseexit', done);
+        $testElement.on('mouseExit', done);
         // execute
-        $testElement.mouseExit().on('mouseexit', dummyEventHandlers.onMouseExit);
+        $testElement.mouseExit().on('mouseExit', dummyEventHandlers.onMouseExit);
         $testElement.trigger("mouseenter").trigger("mouseleave");
     });
 
@@ -32,7 +32,7 @@ describe("jquery.mouseexit.js", function() {
         // spy
         spyOn(dummyEventHandlers, 'onMouseExit');
         // execute
-        $testElement.mouseExit().on('mouseexit', dummyEventHandlers.onMouseExit);
+        $testElement.mouseExit().on('mouseExit', dummyEventHandlers.onMouseExit);
         $testElement.trigger("mouseenter").trigger("mouseleave");
         $testElement.find('button').first().trigger("mouseenter");
         // async assert
@@ -46,7 +46,7 @@ describe("jquery.mouseexit.js", function() {
         // spy
         spyOn(dummyEventHandlers, 'onMouseExit');
         // execute
-        $testElement.mouseExit().on('mouseexit', dummyEventHandlers.onMouseExit);
+        $testElement.mouseExit().on('mouseExit', dummyEventHandlers.onMouseExit);
         $testElement.find('button').first().trigger("mouseenter").trigger("mouseleave");
         $testElement.trigger("mouseenter");
         // async assert
@@ -60,7 +60,7 @@ describe("jquery.mouseexit.js", function() {
         // spy
         spyOn(dummyEventHandlers, 'onMouseExit');
         // execute
-        $testElement.mouseExit().on('mouseexit', dummyEventHandlers.onMouseExit);
+        $testElement.mouseExit().on('mouseExit', dummyEventHandlers.onMouseExit);
         $testElement.trigger("mouseenter");
         $testElement.find('button').first().trigger("mouseenter").trigger("mouseleave");
         $testElement.find('button').last().trigger("mouseenter");

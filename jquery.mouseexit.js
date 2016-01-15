@@ -1,14 +1,14 @@
 /**
 * @name @ebay/jquery-mouse-exit
 * @function $.fn.mouseExit
-* @version 0.0.5
+* @version 0.0.6
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @desc Triggers 'mouseexit' event when the mouse cursor has completely left
+* @desc Triggers 'mouseExit' event when the mouse cursor has completely left
 * the given element and it's children.
 * @required event.relatedTarget - http://msdn.microsoft.com/en-us/library/ie/ff974881(v=vs.85).aspx
-* @fires {object} mouseexit
-* @fires {string} mouseexit.lostFocus
-* @fires {string} mouseexit.gainedFocus
+* @fires {object} mouseExit
+* @fires {string} mouseExit.lostFocus
+* @fires {string} mouseExit.gainedFocus
 */
 (function ($, window, document, undefined) {
 
@@ -33,7 +33,7 @@
                 $this.on('mouseleave', function onMouseLeave(e) {
 
                     timeout = window.setTimeout(function onTimeout() {
-                        $this.trigger('mouseexit', {"lostfocus": e.target, "gainedfocus": e.relatedTarget});
+                        $this.trigger('mouseExit', {"lostfocus": e.target, "gainedfocus": e.relatedTarget});
 
                         if (options.doOnce === true) {
                             $this.off('mouseleave');
