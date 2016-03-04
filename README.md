@@ -3,6 +3,8 @@
 <p>
     <a href="https://travis-ci.org/ianmcburnie/jquery-mouse-exit"><img src="https://api.travis-ci.org/ianmcburnie/jquery-mouse-exit.svg?branch=master" alt="Build Status" /></a>
     <a href='https://coveralls.io/github/ianmcburnie/jquery-mouse-exit?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-mouse-exit/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
+    <a href="https://david-dm.org/ianmcburnie/jquery-mouse-exit"><img src="https://david-dm.org/ianmcburnie/jquery-mouse-exit.svg" alt="Dependency status" /></a>
+    <a href="https://david-dm.org/ianmcburnie/jquery-mouse-exit#info=devDependencies"><img src="https://david-dm.org/ianmcburnie/jquery-mouse-exit/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
 jQuery collection plugin that triggers a 'mouseExit' event only when the mouse
