@@ -1,5 +1,5 @@
 /**
-* @name @ebay/jquery-mouse-exit
+* @name jquery-mouse-exit
 * @function $.fn.mouseExit
 * @version 0.0.7
 * @author Ian McBurnie <ianmcburnie@hotmail.com>

@@ -1,4 +1,4 @@
-# @ebay/jquery-mouse-exit
+# jquery-mouse-exit
 
 <p>
     <a href="https://travis-ci.org/ianmcburnie/jquery-mouse-exit"><img src="https://api.travis-ci.org/ianmcburnie/jquery-mouse-exit.svg?branch=master" alt="Build Status" /></a>
@@ -29,7 +29,7 @@ Please use the tilde range specifier in your package.json to pin to a fixed majo
 ## Install
 
 ```js
-npm install @ebay/jquery-mouse-exit --save
+npm install jquery-mouse-exit --save
 ```
 
 ## Development
