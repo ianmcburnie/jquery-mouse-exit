@@ -7,12 +7,11 @@
     <a href="https://david-dm.org/ianmcburnie/jquery-mouse-exit#info=devDependencies"><img src="https://david-dm.org/ianmcburnie/jquery-mouse-exit/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
-jQuery collection plugin that triggers a 'mouseExit' event only when the mouse
-cursor has completely left the given element.
+jQuery collection plugin that triggers a 'mouseExit' event only when the mouse cursor has completely left the given element.
 
 ```js
 // init plugin
-$(collection).mouseExit();
+$(collection).mouseExit(options);
 
 // handle event
 $(collection).on('mouseExit', function(e, data) {
@@ -24,34 +23,28 @@ $(collection).on('mouseExit', function(e, data) {
 
 This plugin is still in an experimental state, until it reaches v1.0.0 you must consider all minor releases as breaking changes. Patch releases may introduce new features, but will be backwards compatible.
 
-Please use the tilde range specifier in your package.json to pin to a fixed major and minor version.
-
 ## Install
-
-<strike>
-```
-npm install @ebay/jquery-mouse-exit
-```
-</strike>
 
 ```js
 npm install jquery-mouse-exit
 ```
 
-**NOTE: The @ebay package scope is no longer supported. In order to receive latest NPM updates, please use the non-scoped version of this package.**
+## Options
+
+* `delay` - milliseconds in delay before triggering mouseExit event
 
 ## Development
 
-Run `npm start` for test driven development. All tests are located in `test.js`.
+All tests are located in `test.js`.
 
-Execute `npm run` to view all available CLI scripts:
+Useful NPM scripts:
 
-* `npm start` test driven development: watches code and re-tests after any change
+* `npm start` for local browser-sync development of gh-pages
 * `npm test` runs tests & generates reports (see reports section below)
-* `npm run lint` lints code and reports to jshint.txt
-* `npm run minify` builds minified version of code
+* `npm run tdd` test driven development: watches code and re-tests after any change
 * `npm run build` cleans, lints, tests and minifies (called on `npm prepublish` hook)
-* `npm run clean` deletes all generated test reports and coverage files
+
+Execute `npm run` to view all available CLI scripts.
 
 ## Reports
 

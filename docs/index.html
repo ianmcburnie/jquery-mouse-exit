@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Demo: jquery-mouse-exit</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            .demo {
+                background-color: LightYellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div role="main">
+            <h1>Demo: jquery-mouse-exit</h1>
+            <p>Move mouse in and out of demo area. View console for debug output.</p>
+            <div class="demo">
+                <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </div>
+        <script src="browser.js"></script>
+        <script>
+            $(function() {
+                $('.demo').mouseExit({debug: true, delay: 250}).on('mouseExit', function(e) {
+                    console.log(e, this);
+                });
+            });
+        </script>
+    </body>
+</html>

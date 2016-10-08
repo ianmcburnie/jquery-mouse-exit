@@ -1,6 +1,6 @@
 describe("jquery.mouseexit.js", function() {
 
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 750;
 
     var dummyEventTimeoutInterval = jasmine.DEFAULT_TIMEOUT_INTERVAL - 500;
 
