@@ -1,7 +1,7 @@
 {
   "name": "jquery-mouse-exit",
   "description": "Triggers 'mouseexit' event when mouse focus has completely left the element. This type of behaviour is especially desirable for non-modal overlays.",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "scripts": {
     "start": "npm run lasso && parallelshell 'npm run server' 'npm run watch'",
     "tdd": "karma start --autoWatch true --singleRun false",
