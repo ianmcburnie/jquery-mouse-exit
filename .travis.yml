@@ -1,6 +1,5 @@
 sudo: false
 language: node_js
-install: npm
 node_js:
   - "4.3"
 # Send coverage data to Coveralls
