@@ -2,7 +2,7 @@
 * @file jQuery collection plugin that Triggers 'mouseExit' event when the mouse
 * cursor has completely left the given element and it's children.
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @version 0.2.0
+* @version 1.0.0
 * @requires jquery
 */
 (function($, window, document, undefined) {
