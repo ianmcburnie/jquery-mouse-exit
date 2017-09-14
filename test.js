@@ -1,11 +1,12 @@
-describe("jquery.mouseexit.js", function() {
+/* eslint no-undef: 0 */
 
+describe("jquery.mouseexit.js", function() {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 750;
 
     var dummyEventTimeoutInterval = jasmine.DEFAULT_TIMEOUT_INTERVAL - 500;
 
     var dummyEventHandlers = {
-        onMouseExit : function(e) {}
+        onMouseExit: function(e) {}
     };
 
     var dom = '<div id="testElement" tabindex="0"><button></button><button></button></div>'
@@ -70,5 +71,4 @@ describe("jquery.mouseexit.js", function() {
             done();
         }, dummyEventTimeoutInterval);
     });
-
 });

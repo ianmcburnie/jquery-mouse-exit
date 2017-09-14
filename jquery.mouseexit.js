@@ -33,14 +33,14 @@
                 // http://msdn.microsoft.com/en-us/library/ie/ff974881(v=vs.85).aspx
                 $this.on('mouseleave', function onMouseLeave(e) {
                     timeout = window.setTimeout(function onTimeout() {
-                        $this.trigger('mouseExit', {lostfocus: e.target, gainedfocus: e.relatedTarget});
+                        $this.trigger('mouseExit', { lostfocus: e.target, gainedfocus: e.relatedTarget });
 
                         if (options.doOnce === true) {
                             $this.off('mouseleave');
                         }
                     }, options.delay || 250);
 
-                    $this.one('mouseenter', function onMouseEnter(e) {
+                    $this.one('mouseenter', function onMouseEnter() {
                         window.clearTimeout(timeout);
                     });
                 });
