@@ -6,19 +6,17 @@ describe("jquery.mouseexit.js", function() {
     var dummyEventTimeoutInterval = jasmine.DEFAULT_TIMEOUT_INTERVAL - 500;
 
     var dummyEventHandlers = {
-        onMouseExit: function(e) {}
+        onMouseExit: function() {}
     };
 
     var dom = '<div id="testElement" tabindex="0"><button></button><button></button></div>'
             + '<div id="testElementSibling" tabindex="0"><button></button><button></button></div>';
 
-    var $testElement,
-        $testElementSibling;
+    var $testElement;
 
     beforeEach(function() {
         $('body').empty().append($(dom));
         $testElement = $('#testElement');
-        $testElementSibling = $('#testElementSibling');
     });
 
     it("should trigger mouseexit when mouse leaves element root", function(done) {
